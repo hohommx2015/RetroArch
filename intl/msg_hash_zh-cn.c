@@ -38,15 +38,14 @@ int menu_hash_get_help_us_enum(enum msg_hash_enums msg, char *s, size_t len)
       {
          case RARCH_FAST_FORWARD_KEY:
             snprintf(s, len,
-                  "Toggles between fast-forwarding and \n"
-                  "normal speed."
+                  "在快进与正常速度之间切换。"
                   );
             break;
          case RARCH_FAST_FORWARD_HOLD_KEY:
             snprintf(s, len,
-                  "Hold for fast-forward. \n"
+                  "按住按钮快进。 \n"
                   " \n"
-                  "Releasing button disables fast-forward."
+                  "释放按钮关闭快进。"
                   );
             break;
          case RARCH_PAUSE_TOGGLE:
@@ -984,11 +983,10 @@ int menu_hash_get_help_us_enum(enum msg_hash_enums msg, char *s, size_t len)
                );
          break;
       case MENU_ENUM_LABEL_CONFIRM_ON_EXIT:
-         snprintf(s, len, "Are you sure you want to quit?");
+         snprintf(s, len, "确定退出？");
          break;
       case MENU_ENUM_LABEL_SHOW_HIDDEN_FILES:
-         snprintf(s, len, "Show hidden files\n"
-               "and folders.");
+         snprintf(s, len, "显示隐藏文件和文件夹。");
          break;
       case MENU_ENUM_LABEL_VIDEO_SHADER_FILTER_PASS:
          snprintf(s, len,
@@ -1899,11 +1897,11 @@ static const char *menu_hash_to_str_us_label_enum(enum msg_hash_enums msg)
    switch (msg)
    {
       case MENU_ENUM_SUBLABEL_VIDEO_THREADED:
-         return "Improves performance at the cost of latency and more video stuttering. Use only if you cannot obtain full speed otherwise.";
+         return "以更多的视频卡顿感和延迟为代价提高性能。只在你觉得游戏不能全速运行的情况下使用。";
       case MENU_ENUM_SUBLABEL_VIDEO_HARD_SYNC:
-         return "Hard-synchronize the CPU and GPU. Reduces latency at the cost of performance.";
+         return "强制同步CPU和GPU。以牺牲性能为代价减少延迟。";
       case MENU_ENUM_SUBLABEL_MENU_SETTINGS:
-         return "Adjusts settings related to the appearance of the menu screen.";
+         return "调节设置与菜单屏外观相关联。";
       case MSG_CONNECTION_SLOT:
          return "Connection slot";
       case MSG_WAITING_FOR_CLIENT:
@@ -3034,141 +3032,141 @@ const char *msg_hash_to_str_us(enum msg_hash_enums msg)
    switch (msg)
    {
       case MENU_ENUM_SUBLABEL_CONFIG_SAVE_ON_EXIT:
-         return "Saves changes to configuration file on exit.";
+         return "退出时保存配置。";
       case MENU_ENUM_SUBLABEL_VIDEO_HARD_SYNC_FRAMES:
-         return "Sets how many frames the CPU can run ahead of the GPU when using 'Hard GPU Sync'.";
+         return "设置当使用「强制GPU同步」时CPU比GPU多跑出的帧率。";
       case MENU_ENUM_SUBLABEL_VIDEO_REFRESH_RATE_AUTO:
-         return "The accurate estimated refresh rate of the monitor in Hz.";
+         return "显示屏以Hz为单位的精确估算刷新率。";
       case MENU_ENUM_SUBLABEL_VIDEO_MONITOR_INDEX:
-         return "Selects which display monitor to use.";
+         return "选择要使用的显示器。";
       case MENU_ENUM_SUBLABEL_LOG_VERBOSITY:
-         return "Enable or disable logging to the terminal.";
+         return "开启或关闭记录到终端。";
       case MENU_ENUM_SUBLABEL_SHOW_HIDDEN_FILES:
-         return "Show hidden files/directories inside the file browser.";
+         return "在文件浏览器里显示隐藏文件/文件夹。";
       case MENU_ENUM_SUBLABEL_INPUT_MENU_ENUM_TOGGLE_GAMEPAD_COMBO:
-         return "Gamepad button combination to toggle menu.";
+         return "手柄按键组合到切换菜单。";
       case MENU_ENUM_SUBLABEL_CPU_CORES:
-         return "Amount of cores that the CPU has.";
+         return "CPU核心数量。";
       case MENU_ENUM_SUBLABEL_VIDEO_BLACK_FRAME_INSERTION:
-         return "Inserts a black frame inbetween frames. Useful for users of 120 Hz monitors who want to play 60 Hz material with eliminated ghosting.";
+         return "在帧率之间插入一帧黑场。对120Hz显示器的用户而想游玩60Hz的游戏时去除鬼影使用。";
       case MENU_ENUM_SUBLABEL_VIDEO_FRAME_DELAY:
-         return "Reduces latency at the cost of higher risk of video stuttering. Adds a delay after V-Sync (in ms).";
+         return "以更高的视频卡顿风险为代价减少延迟。垂直同步后添加一个以ms为单位的延迟。";
       case MENU_ENUM_SUBLABEL_ADD_CONTENT_LIST:
-         return "Download and/or scan content, and add it to your collection.";
+         return "下载或者扫描内容并添加到你的收藏。";
       case MENU_ENUM_SUBLABEL_NETPLAY:
-         return "Join or host a netplay session.";
+         return "参加或者创建一场联机会话。";
       case MENU_ENUM_SUBLABEL_FPS_SHOW:
-         return "Displays the current framerate per second onscreen.";
+         return "显示当前每秒帧率。";
       case MENU_ENUM_SUBLABEL_VIDEO_SETTINGS:
-         return "Adjusts settings for video output.";
+         return "调节视频输出设置。";
       case MENU_ENUM_SUBLABEL_AUDIO_SETTINGS:
-         return "Adjusts settings for audio output.";
+         return "调节音频输出设置。";
       case MENU_ENUM_SUBLABEL_INPUT_SETTINGS:
-         return "Adjusts settings for joypads, keyboard and mouse.";
+         return "调节手柄、键盘、鼠标设置。";
       case MENU_ENUM_SUBLABEL_WIFI_SETTINGS:
-         return "Scans for wireless networks and establishes connection.";
+         return "扫描无线网络并建立连接。";
       case MENU_ENUM_SUBLABEL_SERVICES_SETTINGS:
-         return "Manage operating system level services.";
+         return "管理开源系统等级服务。";
       case MENU_ENUM_SUBLABEL_SSH_ENABLE:
-         return "Enable or disable remote command line access.";
+         return "开启或关闭远程命令行访问。";
       case MENU_ENUM_SUBLABEL_SAMBA_ENABLE:
-         return "Enable or disable network sharing of your folders.";
+         return "开启或关闭你的文件夹网络共享。";
       case MENU_ENUM_SUBLABEL_BLUETOOTH_ENABLE:
-         return "Enable or disable bluetooth.";
+         return "开启或关闭蓝牙。";
       case MENU_ENUM_SUBLABEL_USER_LANGUAGE:
-         return "Sets the language of the interface.";
+         return "设置界面语言。";
       case MENU_ENUM_SUBLABEL_SUSPEND_SCREENSAVER_ENABLE:
-         return "Prevents your system's screensaver from becoming active.";
+         return "防止你的系统屏幕保护程序被激活。";
       case MENU_ENUM_SUBLABEL_VIDEO_MAX_SWAPCHAIN_IMAGES:
-         return "Tells the video driver to explicitly use a specified buffering mode.";
+         return "让视频驱动使用指定的缓冲模式。";
       case MENU_ENUM_SUBLABEL_ONLINE_UPDATER:
-         return "Download and update add-ons and components for RetroArch.";
+         return "为RetroArch下载并更新附件和组件。";
       case MENU_ENUM_SUBLABEL_INPUT_USER_BINDS:
-         return "Configure controls for this user.";
+         return "为此用户配置控制。";
       case MENU_ENUM_SUBLABEL_INPUT_HOTKEY_BINDS:
-         return "Configure hotkey settings.";
+         return "配置热键设置。";
       case MSG_VALUE_SHUTTING_DOWN:
-         return "Shutting down...";
+         return "关闭...";
       case MSG_VALUE_REBOOTING:
-         return "Rebooting...";
+         return "重启...";
       case MSG_FAILED_TO_START_AUDIO_DRIVER:
-         return "Failed to start audio driver. Will continue without audio.";
+         return "启动音频驱动失败，将会以无声状态继续。";
       case MSG_FOUND_LAST_STATE_SLOT:
-         return "Found last state slot";
+         return "发现最近存档插槽";
       case MSG_VALUE_CONNECT_DEVICE_FROM_A_VALID_PORT:
-         return "Connect device from a valid port.";
+         return "从一个有效接口连接设备。";
       case MSG_DISCONNECT_DEVICE_FROM_A_VALID_PORT:
-         return "Disconnect device from a valid port.";
+         return "从一个有效接口断开设备连接。";
       case MSG_VALUE_DISCONNECTING_DEVICE_FROM_PORT:
-         return "Disconnecting device from port";
+         return "从接口断开设备连接";
       case MSG_BRINGING_UP_COMMAND_INTERFACE_ON_PORT:
-         return "Bringing up command interface on port";
+         return "在端口上打开命令界面";
       case MSG_LOADING_HISTORY_FILE:
-         return "Loading history file";
+         return "载入历史文件中";
       case MENU_ENUM_LABEL_VALUE_SHADER_PIPELINE_RIBBON_SIMPLIFIED:
-         return "Ribbon (simplified)";
+         return "Ribbon (简化)";
       case MENU_ENUM_LABEL_VALUE_SHADER_PIPELINE_RIBBON:
          return "Ribbon";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_FOOTER_OPACITY:
-         return "Footer Opacity";
+         return "页脚不透明度";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_HEADER_OPACITY:
-         return "Header Opacity";
+         return "页眉不透明度";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_BLUE:
-         return "Blue";
+         return "蓝";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_BLUE_GREY:
-         return "Blue Grey";
+         return "蓝灰";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_RED:
-         return "Red";
+         return "红";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_YELLOW:
-         return "Yellow";
+         return "黄";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_NVIDIA_SHIELD:
          return "Shield";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_GREEN:
-         return "Green";
+         return "绿";
       case MENU_ENUM_LABEL_VALUE_MATERIALUI_MENU_COLOR_THEME_DARK_BLUE:
-         return "Dark Blue";
+         return "蓝黑";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_PLAIN:
-         return "Plain";
+         return "单色";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_LEGACY_RED:
-         return "Legacy Red";
+         return "传统红";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_DARK_PURPLE:
-         return "Dark Purple";
+         return "紫黑";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_MIDNIGHT_BLUE:
-         return "Midnight Blue";
+         return "午夜蓝";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_GOLDEN:
-         return "Golden";
+         return "金";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_ELECTRIC_BLUE:
-         return "Electric Blue";
+         return "电子蓝";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_APPLE_GREEN:
-         return "Apple Green";
+         return "苹果绿";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_UNDERSEA:
-         return "Undersea";
+         return "海底";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_VOLCANIC_RED:
-         return "Volcanic Red";
+         return "火山红";
       case MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_DARK:
-         return "Dark";
+         return "黑";
       case MENU_ENUM_LABEL_VALUE_CHEEVOS_UNLOCKED_ENTRY:
-         return "Unlocked";
+         return "解锁";
       case MENU_ENUM_LABEL_VALUE_CHEEVOS_LOCKED_ENTRY:
-         return "Locked";
+         return "锁定";
       case MENU_ENUM_LABEL_VALUE_INPUT_POLL_TYPE_BEHAVIOR_LATE:
-         return "Late";
+         return "迟";
       case MENU_ENUM_LABEL_VALUE_INPUT_POLL_TYPE_BEHAVIOR_NORMAL:
-         return "Normal";
+         return "正常";
       case MENU_ENUM_LABEL_VALUE_INPUT_POLL_TYPE_BEHAVIOR_EARLY:
-         return "Early";
+         return "早";
       case MSG_INTERNAL_MEMORY:
-         return "Internal Memory";
+         return "内部存储";
       case MSG_EXTERNAL_APPLICATION_DIR:
-         return "External Application Dir";
+         return "外部应用目录";
       case MSG_APPLICATION_DIR:
-         return "Application Dir";
+         return "应用目录";
       case MSG_PROGRAM:
          return "RetroArch";
       case MSG_LIBRETRO_FRONTEND:
-         return "Frontend for libretro";
+         return "libretro前端";
       case MSG_LOADING:
-         return "Loading";
+         return "载入中";
       case MSG_GAME_SPECIFIC_CORE_OPTIONS_FOUND_AT:
          return "Per-Game Options: game-specific core options found at";
       case MSG_RESTORING_DEFAULT_SHADER_PRESET_TO:
